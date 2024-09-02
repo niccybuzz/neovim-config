@@ -1,5 +1,6 @@
 require 'bigcaggus.leader'
 require 'bigcaggus.remap'
+
 require 'bigcaggus.opts'
 require 'bigcaggus.autocmd'
 
@@ -20,14 +21,10 @@ vim.opt.rtp:prepend(lazypath)
 -- Use `opts = {}` to force a plugin to be loaded.
 
 require('lazy').setup({
-
   { import = 'bigcaggus.plugins' },
 
   -- Self explanatory
   require 'bigcaggus.plugins.debug',
-
-  --Line indenting
-  require 'bigcaggus.plugins.indent_line',
 
   -- Displays tooltips for buttons
   require 'bigcaggus.plugins.which-key',
@@ -43,6 +40,9 @@ require('lazy').setup({
 
   -- Tree file system
   require 'bigcaggus.plugins.neo-tree',
+
+  -- Nice colourscheme
+  'rebelot/kanagawa.nvim',
 
   -- adds gitsigns recommend keymaps
   require 'bigcaggus.plugins.gitsigns',
@@ -70,9 +70,8 @@ require('lazy').setup({
 
   -- Comments
   require 'bigcaggus.plugins.todo-comments',
-
   -- A series of small plugins. Take a look at the lua file
-  require 'bigcaggus.plugins.mini',
+  --require 'bigcaggus.plugins.mini',
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
@@ -94,3 +93,6 @@ require('lazy').setup({
     },
   },
 })
+
+-- Colorscheme set
+vim.cmd 'colorscheme kanagawa-wave'

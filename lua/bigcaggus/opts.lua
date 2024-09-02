@@ -2,9 +2,6 @@
 -- See `:help vim.opt`
 
 -- keymap to open init.lua quickly
-
-vim.cmd [[colorscheme habamax]]
-
 vim.opt.number = true
 vim.opt.relativenumber = true
 
